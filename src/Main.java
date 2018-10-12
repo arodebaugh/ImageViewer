@@ -141,7 +141,7 @@ public class Main extends Application {
                 Image openedImage = new Image(fileName);
 
                 imageView.setImage(openedImage);
-                
+
                 choiceBox.getSelectionModel().select(5); // Need to add choiceBox
             }
         });
@@ -149,11 +149,11 @@ public class Main extends Application {
         buttonLayout.getChildren().add(toggleButtons[5]);
 
         ScrollPane scrollPane = new ScrollPane(buttonLayout);
-        scrollPane.setFitToHeight(true);
+        scrollPane.setContent(buttonLayout);
 
         border.setTop(choiceBox);
         border.setCenter(imageLayout);
-        border.setBottom(buttonLayout);
+        border.setBottom(scrollPane);
 
         primaryStage.setScene(new Scene(border, 1000, 750));
         primaryStage.show();
