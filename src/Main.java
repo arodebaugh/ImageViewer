@@ -118,7 +118,7 @@ public class Main extends Application {
 
                 imageView.setImage(openedImage);
 
-                toggleButtons[5].setText("5");
+                toggleButtons[5].setText("6");
 
                 try {
                     fileStream[5] = new FileInputStream(fileName);
@@ -149,7 +149,6 @@ public class Main extends Application {
         buttonLayout.getChildren().add(toggleButtons[5]);
 
         ScrollPane scrollPane = new ScrollPane(buttonLayout);
-        scrollPane.setContent(buttonLayout);
 
         border.setTop(choiceBox);
         border.setCenter(imageLayout);
